@@ -1,11 +1,11 @@
 import "./App.css";
-import DateCalc from "./components/DateCalc";
+import DatePicker from "./components/DatePicker";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <DateCalc />
+        <DatePicker />
       </header>
     </div>
   );
