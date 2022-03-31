@@ -10,7 +10,7 @@ const DatePicker = () => {
     setDate(e);
   };
 
-  // const today = new Date();
+  const today = new Date();
   const thirtyDays = new Date(date);
   const sixtyDays = new Date(date);
   const ninetyDays = new Date(date);
@@ -18,6 +18,7 @@ const DatePicker = () => {
   thirtyDays.setDate(date.getDate() + 30);
   sixtyDays.setDate(date.getDate() + 60);
   ninetyDays.setDate(date.getDate() + 90);
+  let now = today.toLocaleString();
 
   return (
     <div>
@@ -26,6 +27,7 @@ const DatePicker = () => {
           onDateChange(value);
         }}
       />
+      <p>UTC time: {now}</p>
       <h1>Expiration dates:</h1>
       <h2>30 days: {thirtyDays.toLocaleDateString()}</h2>
       <h2>60 days: {sixtyDays.toLocaleDateString()}</h2>
