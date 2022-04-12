@@ -28,6 +28,7 @@ const DatePicker = () => {
   };
 
   const onSubmit = () => {
+    alert("Slack message generated!");
     expirationDate.setHours(8);
 
     const dateWeWant = new Date(expirationDate).getTime();
