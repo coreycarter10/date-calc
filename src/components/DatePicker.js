@@ -85,6 +85,7 @@ const DatePicker = () => {
           <option value="Corey">Corey</option>
           <option value="Joe">Joe</option>
           <option value="Mandy">Mandy</option>
+          <option value="Preston">Preston</option>
           <option value="Sydney">Sydney</option>
           <option value="Tanner">Tanner</option>
           <option value="Whitney">Whitney</option>
