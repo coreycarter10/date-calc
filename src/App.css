@@ -24,15 +24,69 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#selectUser {
+  display: inline-block;
+  font-weight: 700;
+  color: black;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  background-color: white;
+  border: 2px solid transparent;
+  padding: 16px 22px;
+  font-size: 0.875rem;
+  line-height: 17px;
+  border-radius: 30px;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#ticketInput {
+  display: inline-block;
+  font-weight: 700;
+  color: black;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  background-color: white;
+  border: 2px solid transparent;
+  padding: 16px 22px;
+  font-size: 0.875rem;
+  line-height: 17px;
+  border-radius: 30px;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+#submitButton {
+  display: inline-block;
+  font-weight: 700;
+  color: #303f9f;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  background-color: white;
+  border: 2px solid transparent;
+  padding: 16px 22px;
+  font-size: 0.875rem;
+  line-height: 17px;
+  border-radius: 30px;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+#submitButton:hover {
+  background-color: #2396fb;
+  cursor: pointer;
+}
+
+#submitButton:active {
+  background-color: #00e5ff;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#slackDiv {
+  margin: 15px;
+  padding: 15px;
 }
