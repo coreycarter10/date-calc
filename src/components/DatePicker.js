@@ -8,7 +8,7 @@ import "../App.css";
 const DatePicker = () => {
   const [date, setDate] = useState(new Date());
   const [expirationDate, setExpirationDate] = useState(new Date());
-  const [ticketNumber, setTicketNumber] = useState("");
+  const [message, setMessage] = useState("");
   const [user, setUser] = useState("");
 
   const onDateChange = (e) => {
@@ -29,28 +29,18 @@ const DatePicker = () => {
 
   const onSubmit = () => {
     alert("Slack message generated!");
-    expirationDate.setHours(8);
 
-    const dateWeWant = new Date(expirationDate).getTime();
+    expirationDate.setUTCHours(15);
 
-    const timeToExpire = setInterval(function () {
-      const now = new Date().getTime();
-
-      const timeRemaining = dateWeWant - now;
-
-      if (timeRemaining < 0) {
-        clearInterval(timeToExpire);
-
-        axios
-          .post("https://env79oe71tjszze.m.pipedream.net", {
-            user,
-            ticketNumber,
-          })
-          .then((res) => {
-            console.log("Submission successful");
-          });
-      }
-    }, 1000);
+    axios
+      .post("https://env79oe71tjszze.m.pipedream.net", {
+        user,
+        expirationDate,
+        message,
+      })
+      .then((res) => {
+        console.log("Submission successful");
+      });
   };
 
   return (
@@ -91,11 +81,11 @@ const DatePicker = () => {
           <option value="Whitney">Whitney</option>
         </select>
         <input
-          id="ticketInput"
+          id="messageInput"
           type="text"
-          placeholder="Enter ticket number"
+          placeholder="Message..."
           onChange={(e) => {
-            setTicketNumber(e.target.value);
+            setMessage(e.target.value);
           }}
         />
         <button id="submitButton" onClick={() => onSubmit()}>

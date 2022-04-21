@@ -41,7 +41,7 @@
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-#ticketInput {
+#messageInput {
   display: inline-block;
   font-weight: 700;
   color: black;
