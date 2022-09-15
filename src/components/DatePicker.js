@@ -6,14 +6,14 @@ import "./DatePickers.css";
 import "../App.css";
 
 const DatePicker = () => {
-  // const [date, setDate] = useState(new Date());
+  const [date, setDate] = useState(new Date());
   // const [expirationDate, setExpirationDate] = useState(new Date());
   // const [message, setMessage] = useState("");
   // const [user, setUser] = useState("");
 
-  // const onDateChange = (e) => {
-  //   setDate(e);
-  // };
+  const onDateChange = (e) => {
+    setDate(e);
+  };
 
   const thirtyDays = new Date(date);
   const sixtyDays = new Date(date);
