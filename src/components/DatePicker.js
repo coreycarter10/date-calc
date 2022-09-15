@@ -6,14 +6,14 @@ import "./DatePickers.css";
 import "../App.css";
 
 const DatePicker = () => {
-  const [date, setDate] = useState(new Date());
-  const [expirationDate, setExpirationDate] = useState(new Date());
-  const [message, setMessage] = useState("");
-  const [user, setUser] = useState("");
+  // const [date, setDate] = useState(new Date());
+  // const [expirationDate, setExpirationDate] = useState(new Date());
+  // const [message, setMessage] = useState("");
+  // const [user, setUser] = useState("");
 
-  const onDateChange = (e) => {
-    setDate(e);
-  };
+  // const onDateChange = (e) => {
+  //   setDate(e);
+  // };
 
   const thirtyDays = new Date(date);
   const sixtyDays = new Date(date);
@@ -23,25 +23,25 @@ const DatePicker = () => {
   sixtyDays.setDate(date.getDate() + 60);
   ninetyDays.setDate(date.getDate() + 90);
 
-  const onExpirationDateChange = (e) => {
-    setExpirationDate(e);
-  };
+  // const onExpirationDateChange = (e) => {
+  //   setExpirationDate(e);
+  // };
 
-  const onSubmit = () => {
-    alert("Slack message generated!");
+  // const onSubmit = () => {
+  //   alert("Slack message generated!");
 
-    expirationDate.setUTCHours(15);
+  //   expirationDate.setUTCHours(15);
 
-    axios
-      .post("https://env79oe71tjszze.m.pipedream.net", {
-        user,
-        expirationDate,
-        message,
-      })
-      .then((res) => {
-        console.log("Submission successful");
-      });
-  };
+  //   axios
+  //     .post("https://env79oe71tjszze.m.pipedream.net", {
+  //       user,
+  //       expirationDate,
+  //       message,
+  //     })
+  //     .then((res) => {
+  //       console.log("Submission successful");
+  //     });
+  // };
 
   return (
     <div id="contentDiv">
@@ -56,7 +56,7 @@ const DatePicker = () => {
       <h2>60 days: {sixtyDays.toLocaleDateString()}</h2>
       <h2>90 days: {ninetyDays.toLocaleDateString()}</h2>
 
-      <h2>Set up an automated slack message:</h2>
+      {/* <h2>Set up an automated slack message:</h2>
       <Calendar
         onChange={(value, event) => {
           onExpirationDateChange(value);
@@ -90,8 +90,8 @@ const DatePicker = () => {
         />
         <button id="submitButton" onClick={() => onSubmit()}>
           Submit slack message
-        </button>
-      </div>
+        </button> */}
+      {/* </div> */}
     </div>
   );
 };
